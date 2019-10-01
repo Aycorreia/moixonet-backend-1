@@ -2,10 +2,13 @@
 
 namespace Tests\Feature;
 
+use App\Channel;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ChannelsControllerTest extends TestCase
 {
+    use RefreshDatabase;
 
     /**
      * @test
@@ -28,6 +31,7 @@ class ChannelsControllerTest extends TestCase
     {
         // 1 PREPARE
         // MIGRATIONS I SEEDS -> CREAR TAULES I OMPLIR-LES
+        // Facades
         Channel::create([
             'name' => 'Canal 1'
         ]);
