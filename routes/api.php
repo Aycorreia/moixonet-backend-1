@@ -16,3 +16,19 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::get('/v1/channels', function() {
+//     TODO
+//    dump('AQUI VAN LOS CANALS!');
+//});
+
+
+Route::get('/v1/channels', 'ChannelsController@index');
+
+
+
+// GET /channels index()
+// GET /channels/{id} show()
+// POST /channels store()
+// PUT/PATCH /channels/{id} update()
+// DELETE /channels/{id} destroy()
