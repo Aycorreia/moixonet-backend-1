@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChannelsController;
 use Illuminate\Http\Request;
 
 /*
@@ -17,13 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::get('/v1/channels', function() {
-//     TODO
-//    dump('AQUI VAN LOS CANALS!');
-//});
-
-
-Route::get('/v1/channels', 'ChannelsController@index');
+//Route::get('/v1/channels', 'ChannelsController@index');
+Route::get('/v1/channels', [ChannelsController::class, 'index' ] );
 
 
 

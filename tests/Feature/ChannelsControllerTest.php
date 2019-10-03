@@ -6,6 +6,11 @@ use App\Channel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
+/**
+ * Class ChannelsControllerTest
+ * @package Tests\Feature
+ * @covers \App\Http\Controllers\ChannelsController
+ */
 class ChannelsControllerTest extends TestCase
 {
     use RefreshDatabase;
@@ -19,6 +24,7 @@ class ChannelsControllerTest extends TestCase
         $result = $response->getContent();
         $result2 = json_decode($result);
         $response->assertSuccessful();
+//        $response->assertStatus(200);
         $this->assertEmpty($result2);
         $this->assertEquals($result,"[]");
     }
@@ -29,6 +35,7 @@ class ChannelsControllerTest extends TestCase
      */
     public function it_returns_channels()
     {
+        $this->withoutExceptionHandling();
         // 1 PREPARE
         // MIGRATIONS I SEEDS -> CREAR TAULES I OMPLIR-LES
         // Facades
@@ -56,8 +63,8 @@ class ChannelsControllerTest extends TestCase
         $response->assertSuccessful();
         $this->assertCount(3,$channels);
         $this->assertEquals($channels[0]->name,'Canal 1');
-        $this->assertEquals($channels[0]->name,'Canal 2');
-        $this->assertEquals($channels[0]->name,'Canal 3');
+        $this->assertEquals($channels[1]->name,'Canal 2');
+        $this->assertEquals($channels[2]->name,'Canal 3');
 
 
     }
