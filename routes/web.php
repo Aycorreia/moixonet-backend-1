@@ -11,6 +11,23 @@
 |
 */
 
+use App\Channel;
+
 Route::get('/', function () {
     return view('welcome');
 });
+//
+//
+//Route::get('/crear_channels', function () {
+//    Channel::create([
+//        'name' => 'Canal 1'
+//    ]);
+//
+//    Channel::create([
+//        'name' => 'Canal 2'
+//    ]);
+//
+//    Channel::create([
+//        'name' => 'Canal 3'
+//    ]);
+//});
