@@ -3,7 +3,10 @@
 namespace Tests\Feature;
 
 use App\Channel;
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 /**
@@ -67,5 +70,66 @@ class ChannelsControllerTest extends TestCase
         $this->assertEquals($channels[2]->name,'Canal 3');
 
 
+    }
+
+    // MP9 SEGURETAT -> LOGIN
+
+    /** @test */
+    public function guest_user_can_not_add_channels()
+    {
+        // 1 PREPARE
+//        $this->withoutExceptionHandling();
+
+        // 2 EXECUTE
+        $response = $this->json('POST','/api/v1/channels');
+
+        // 3 ASSERT
+        $response->assertStatus(401);
+    }
+
+    /** @test */
+    public function regular_user_can_add_channels()
+    {
+
+        // 1 PREPARE
+        $this->login();
+
+        // 2 EXECUTE
+        $response = $this->json('POST','/api/v1/channels',[
+            'channel' => 'Canal 1'
+        ]);
+
+        // 3 ASSERT
+        $response->assertSuccessful();
+
+        // Ha d'existir un nou canala a la base de dades TODO
+        // Channel::first()
+
+    }
+
+    public function login($email=null,$password=null,$name = null)
+    {
+        if ($email === null) $email = 'sergiturbadenas@gmail.com';
+        if ($password === null) $password = '12345678';
+        if ($name === null) $name = 'Sergi';
+        $user = User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => Hash::make($password)
+        ]);
+        $this->loginAsUser($user);
+    }
+
+//    /** @test */
+//    public function channels_manager_user_user_can_add_channels()
+//    {
+//
+//    }
+    /**
+     * @param $user
+     */
+    public function loginAsUser($user): void
+    {
+        Auth::login($user);
     }
 }

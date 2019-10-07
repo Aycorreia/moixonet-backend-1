@@ -21,6 +21,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::get('/v1/channels', 'ChannelsController@index');
 Route::get('/v1/channels', [ChannelsController::class, 'index' ] );
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::post('/v1/channels', [ChannelsController::class, 'store' ] );
+});
+
+
+
+
+
 
 
 // GET /channels index()

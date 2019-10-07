@@ -17,4 +17,9 @@ class ChannelsController extends Controller
     {
         return Channel::all();
     }
+
+    public function store()
+    {
+
+    }
 }
