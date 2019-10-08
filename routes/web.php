@@ -12,6 +12,7 @@
 */
 
 use App\Channel;
+use App\Http\Controllers\ChannelsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,3 +32,4 @@ Route::get('/', function () {
 //        'name' => 'Canal 3'
 //    ]);
 //});
+
