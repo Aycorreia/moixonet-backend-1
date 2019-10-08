@@ -136,9 +136,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ChannelsControllerTest.it_returns_no_channels_if_database_is_void">
+  <component name="RunManager" selected="PHPUnit.ChannelsControllerTest.regular_user_can_add_channels_validation">
     <configuration name="ChannelsControllerTest.it_returns_no_channels_if_database_is_void" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="it_returns_no_channels_if_database_is_void" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ChannelsControllerTest.regular_user_can_add_channels_validation" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="regular_user_can_add_channels_validation" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -147,6 +151,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ChannelsControllerTest.regular_user_can_add_channels_validation" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.it_returns_no_channels_if_database_is_void" />
       </list>
     </recent_temporary>
@@ -165,6 +170,7 @@
       <workItem from="1570120853442" duration="4073000" />
       <workItem from="1570199459379" duration="812000" />
       <workItem from="1570466764952" duration="2748000" />
+      <workItem from="1570552680187" duration="3564000" />
     </task>
     <servers />
   </component>

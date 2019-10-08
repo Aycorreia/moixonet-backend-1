@@ -23,6 +23,7 @@ Route::get('/v1/channels', [ChannelsController::class, 'index' ] );
 
 Route::group(['middleware' => ['auth']], function () {
     Route::post('/v1/channels', [ChannelsController::class, 'store' ] );
+//    Route::delete('/v1/channels', [ChannelsController::class, 'delete' ] );
 });
 
 

@@ -88,22 +88,50 @@ class ChannelsControllerTest extends TestCase
     }
 
     /** @test */
+    public function regular_user_can_add_channels_validation()
+    {
+        //1 PREPARE
+        $this->login();
+        // 422 Error de validació
+        $response = $this->json('POST','/api/v1/channels');
+        $response->assertStatus(422);
+        $result = json_decode($response->getContent());
+
+        $this->assertEquals($result->message,'The given data was invalid.');
+        $this->assertEquals($result->errors->name[0],'The name field is required.');
+    }
+
+    /** @test */
     public function regular_user_can_add_channels()
     {
-
         // 1 PREPARE
         $this->login();
 
+        $this->assertNull(Channel::first());
+
         // 2 EXECUTE
         $response = $this->json('POST','/api/v1/channels',[
-            'channel' => 'Canal 1'
+            'name' => 'Canal 1'
         ]);
+        $response->assertSuccessful();
+        $channelResponse = json_decode($response->getContent());
+        $this->assertNotNull($channel = Channel::first());
+        $this->assertEquals($channel->name,'Canal 1');
+
+        $this->assertEquals($channelResponse->name,'Canal 1');
+        $this->assertNotNull($channelResponse->id);
+        $this->assertNotNull($channelResponse->created_at);
+        $this->assertNotNull($channelResponse->updated_at);
 
         // 3 ASSERT
         $response->assertSuccessful();
 
         // Ha d'existir un nou canala a la base de dades TODO
         // Channel::first()
+
+//        $this->assertDatabaseHas('channels', [
+//            'name' => 'Canal 1'
+//        ]);
 
     }
 
