@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChannelsController;
+use App\Http\Controllers\MessagesController;
 use Illuminate\Http\Request;
 
 /*
@@ -26,7 +27,7 @@ Route::group(['middleware' => ['auth']], function () {
 //    Route::delete('/v1/channels', [ChannelsController::class, 'delete' ] );
 });
 
-
+Route::get('/v1/messages', [MessagesController::class, 'index' ] );
 
 
 

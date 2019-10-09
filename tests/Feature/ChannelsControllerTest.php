@@ -135,29 +135,9 @@ class ChannelsControllerTest extends TestCase
 
     }
 
-    public function login($email=null,$password=null,$name = null)
-    {
-        if ($email === null) $email = 'sergiturbadenas@gmail.com';
-        if ($password === null) $password = '12345678';
-        if ($name === null) $name = 'Sergi';
-        $user = User::create([
-            'name' => $name,
-            'email' => $email,
-            'password' => Hash::make($password)
-        ]);
-        $this->loginAsUser($user);
-    }
-
-//    /** @test */
+    //    /** @test */
 //    public function channels_manager_user_user_can_add_channels()
 //    {
 //
 //    }
-    /**
-     * @param $user
-     */
-    public function loginAsUser($user): void
-    {
-        Auth::login($user);
-    }
 }
