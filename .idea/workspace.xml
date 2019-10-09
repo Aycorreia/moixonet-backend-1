@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad79c744-a5d1-4659-98da-961a10590dd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +16,17 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
@@ -118,6 +124,7 @@
   <component name="ProjectId" id="1RbzCXt6hUoAc5gnVWGgvuOyAHY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -134,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ChannelsControllerTest.regular_user_can_add_channels_validation">
+  <component name="RunManager" selected="PHPUnit.MessageControllerTest.guest_user_can_list_messages">
     <configuration name="ChannelsControllerTest.it_returns_no_channels_if_database_is_void" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="it_returns_no_channels_if_database_is_void" scope="Method" />
       <method v="2" />
@@ -143,12 +150,27 @@
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="regular_user_can_add_channels_validation" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="MessageControllerTest.guest_user_can_list_messages" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MessageControllerTest" file="$PROJECT_DIR$/tests/Feature/MessageControllerTest.php" method="guest_user_can_list_messages" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MessageControllerTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MessageControllerTest" file="$PROJECT_DIR$/tests/Feature/MessageControllerTest.php" method="testExample" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MessageControllerTest.zero_messages" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MessageControllerTest" file="$PROJECT_DIR$/tests/Feature/MessageControllerTest.php" method="zero_messages" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MessageControllerTest.guest_user_can_list_messages" />
+        <item itemvalue="PHPUnit.MessageControllerTest.zero_messages" />
+        <item itemvalue="PHPUnit.MessageControllerTest.testExample" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.regular_user_can_add_channels_validation" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.it_returns_no_channels_if_database_is_void" />
       </list>
@@ -168,7 +190,8 @@
       <workItem from="1570120853442" duration="4073000" />
       <workItem from="1570199459379" duration="812000" />
       <workItem from="1570466764952" duration="2748000" />
-      <workItem from="1570552680187" duration="4243000" />
+      <workItem from="1570552680187" duration="5006000" />
+      <workItem from="1570639383605" duration="2206000" />
     </task>
     <servers />
   </component>
