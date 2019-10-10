@@ -28,10 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::get('/v1/messages', [MessagesController::class, 'index' ] );
-
-
-
-
+Route::get('/v1/messages/{id}', [MessagesController::class, 'index' ] );
 
 // GET /channels index()
 // GET /channels/{id} show()
