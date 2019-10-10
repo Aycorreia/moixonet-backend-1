@@ -23,13 +23,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/v1/channels', [ChannelsController::class, 'index' ] );
 Route::get('/v1/channels/{channel}', [ChannelsController::class, 'show' ] );
 
-Route::group(['middleware' => ['auth']], function () {
+//Route::group(['middleware' => ['auth']], function () {
     Route::post('/v1/channels', [ChannelsController::class, 'store' ] );
 //    Route::delete('/v1/channels/{id}', [ChannelsController::class, 'destroy' ] );
     // ROUTE MODEL BINDING
     Route::delete('/v1/channels/{channel}', [ChannelsController::class, 'destroy' ] );
     Route::put('/v1/channels/{channel}', [ChannelsController::class, 'update' ] );
-});
+//});
 
 Route::get('/v1/messages', [MessagesController::class, 'index' ] );
 Route::get('/v1/messages/{id}', [MessagesController::class, 'index' ] );
