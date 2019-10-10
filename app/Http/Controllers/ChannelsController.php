@@ -7,6 +7,7 @@ use App\Http\Requests\ChannelDestroyRequest;
 use App\Http\Requests\ChannelIndexRequest;
 use App\Http\Requests\ChannelShowRequest;
 use App\Http\Requests\ChannelStoreRequest;
+use App\Http\Requests\ChannelUpdateRequest;
 use Tests\Feature\ChannelsControllerTest;
 
 class ChannelsController extends Controller
@@ -54,10 +55,9 @@ class ChannelsController extends Controller
         $channel->delete();
     }
 
-    public function update()
+    public function update(ChannelUpdateRequest $request, Channel $channel)
     {
-        // Comprovar que m'han passat un id
-        // name
-
+        $channel->name = $request->name;
+        $channel->save();
     }
 }

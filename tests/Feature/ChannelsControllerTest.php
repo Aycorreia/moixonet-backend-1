@@ -205,7 +205,10 @@ class ChannelsControllerTest extends TestCase
     public function regular_user_can_update_channel_validation()
     {
         $this->login();
-        $response = $this->json('PUT','/api/v1/channels/1');
+        $channel = Channel::create([
+            'name' => 'Canal 1'
+        ]);
+        $response = $this->json('PUT','/api/v1/channels/' . $channel->id,[]);
         $response->assertStatus(422);
     }
 }

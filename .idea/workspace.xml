@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad79c744-a5d1-4659-98da-961a10590dd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChannelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChannelsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,17 +143,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ChannelsControllerTest.regular_user_can_update_channel">
+  <component name="RunManager" selected="PHPUnit.ChannelsControllerTest">
     <configuration name="ChannelsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ChannelsControllerTest.guest_user_can_show_channel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="guest_user_can_show_channel" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ChannelsControllerTest.guest_user_cannot_remove_channels" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="guest_user_cannot_remove_channels" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ChannelsControllerTest.guest_user_cannot_update_channel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -164,17 +160,21 @@
       <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="regular_user_can_update_channel" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="ChannelsControllerTest.regular_user_can_update_channel_validation" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="regular_user_can_update_channel_validation" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ChannelsControllerTest" />
+        <item itemvalue="PHPUnit.ChannelsControllerTest.regular_user_can_update_channel_validation" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.regular_user_can_update_channel" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.guest_user_cannot_update_channel" />
         <item itemvalue="PHPUnit.ChannelsControllerTest.guest_user_can_show_channel" />
-        <item itemvalue="PHPUnit.ChannelsControllerTest" />
-        <item itemvalue="PHPUnit.ChannelsControllerTest.guest_user_cannot_remove_channels" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +195,7 @@
       <workItem from="1570552680187" duration="5006000" />
       <workItem from="1570639383605" duration="7665000" />
       <workItem from="1570725827332" duration="86000" />
-      <workItem from="1570725960987" duration="2496000" />
+      <workItem from="1570725960987" duration="3239000" />
     </task>
     <servers />
   </component>
