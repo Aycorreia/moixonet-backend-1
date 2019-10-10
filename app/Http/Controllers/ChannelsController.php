@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Channel;
+use App\Http\Requests\ChannelDestroyRequest;
 use App\Http\Requests\ChannelIndexRequest;
+use App\Http\Requests\ChannelShowRequest;
 use App\Http\Requests\ChannelStoreRequest;
 use Tests\Feature\ChannelsControllerTest;
 
@@ -17,6 +19,11 @@ class ChannelsController extends Controller
     public function index(ChannelIndexRequest $request)
     {
         return Channel::all();
+    }
+
+    public function show(ChannelShowRequest $request, Channel $channel)
+    {
+        return $channel;
     }
 
     public function store(ChannelStoreRequest $request)
@@ -35,9 +42,16 @@ class ChannelsController extends Controller
 
     }
 
-    public function delete()
+    // SENSE ROUTE MODEL BINDING
+//    public function destroy(ChannelDestroyRequest $request)
+//    {
+//        Channel::destroy($request->id);
+//    }
+
+    // AMB ROUTE MODEL BINDING
+    public function destroy(ChannelDestroyRequest $request, Channel $channel)
     {
-        // Comprovar que m'han passat un id
+        $channel->delete();
     }
 
     public function update()

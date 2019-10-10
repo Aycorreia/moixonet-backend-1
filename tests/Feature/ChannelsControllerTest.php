@@ -3,10 +3,7 @@
 namespace Tests\Feature;
 
 use App\Channel;
-use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 /**
@@ -140,4 +137,45 @@ class ChannelsControllerTest extends TestCase
 //    {
 //
 //    }
+
+    // URL ENDPOINT API
+    // DELETE /api/v1/channels/{id}
+    // ROUTE MODEL BINDING
+    // 200 --> OK
+    // 401 --> NOT LOGGED
+
+
+    /** @test */
+    public function guest_user_cannot_remove_channels()
+    {
+        // PROTOCOL HTTP -> SEND HTTP REQUEST I OBTENIM HTTP RESPONSE
+        $response = $this->json('DELETE','/api/v1/channels/1');
+        $response->assertStatus(401);
+    }
+
+    /** @test */
+    public function regular_user_can_remove_channels()
+    {
+        $this->login();
+        $channel = Channel::create([
+            'name' => 'Canal 1'
+        ]);
+        $response = $this->json('DELETE','/api/v1/channels/'  . $channel->id);
+        $response->assertSuccessful();
+
+        $this->assertNull(Channel::find($channel->id));
+    }
+
+    /** @test */
+    public function guest_user_can_show_channel()
+    {
+        $channel = Channel::create([
+            'name' => 'Canal 1'
+        ]);
+        $response = $this->json('GET','/api/v1/channels/'  . $channel->id);
+        $response->assertSuccessful();
+        $channelObj = json_decode($response->getContent());
+        $this->assertEquals($channelObj->id,$channel->id);
+        $this->assertEquals($channelObj->name,$channel->name);
+    }
 }

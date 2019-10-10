@@ -62,8 +62,9 @@ class MessageControllerTest extends TestCase
         // 3 ASSERT
         $response->assertSuccessful();
         $message = json_decode($response->getContent());
-        $this->assertEquals($message->title,$message1->title);
-        $this->assertEquals($message->description,$message1->description);
+
+        $this->assertEquals($message[0]->title,$message1->title);
+        $this->assertEquals($message[0]->description,$message1->description);
     }
 
 
