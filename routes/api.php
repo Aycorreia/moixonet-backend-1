@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
 //    Route::delete('/v1/channels/{id}', [ChannelsController::class, 'destroy' ] );
     // ROUTE MODEL BINDING
     Route::delete('/v1/channels/{channel}', [ChannelsController::class, 'destroy' ] );
+    Route::put('/v1/channels/{channel}', [ChannelsController::class, 'update' ] );
 });
 
 Route::get('/v1/messages', [MessagesController::class, 'index' ] );

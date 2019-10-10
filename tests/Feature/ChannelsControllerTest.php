@@ -178,4 +178,34 @@ class ChannelsControllerTest extends TestCase
         $this->assertEquals($channelObj->id,$channel->id);
         $this->assertEquals($channelObj->name,$channel->name);
     }
+
+    /** @test */
+    public function guest_user_cannot_update_channel()
+    {
+        $response = $this->json('PUT','/api/v1/channels/1');
+        $response->assertStatus(401);
+    }
+
+    /** @test */
+    public function regular_user_can_update_channel()
+    {
+        $this->login();
+        $channel = Channel::create([
+            'name' => 'Canal 1'
+        ]);
+        $response = $this->json('PUT','/api/v1/channels/'  . $channel->id,[
+            'name' => 'Nou nom del canal 1'
+        ]);
+        $response->assertSuccessful();
+        $newChannel = Channel::find($channel->id); // $channel->refresh();
+        $this->assertEquals($newChannel->name, 'Nou nom del canal 1');
+    }
+
+    /** @test */
+    public function regular_user_can_update_channel_validation()
+    {
+        $this->login();
+        $response = $this->json('PUT','/api/v1/channels/1');
+        $response->assertStatus(422);
+    }
 }
