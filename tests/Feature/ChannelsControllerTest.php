@@ -63,9 +63,11 @@ class ChannelsControllerTest extends TestCase
         $response->assertSuccessful();
         $this->assertCount(3,$channels);
         $this->assertEquals($channels[0]->name,'Canal 1');
+        $this->assertEquals($channels[0]->active,true);
         $this->assertEquals($channels[1]->name,'Canal 2');
+        $this->assertEquals($channels[1]->active,true);
         $this->assertEquals($channels[2]->name,'Canal 3');
-
+        $this->assertEquals($channels[2]->active,true);
 
     }
 
