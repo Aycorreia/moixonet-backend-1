@@ -17,6 +17,7 @@ class CreateChannelsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->boolean('active')->default(true);
+            $table->unsignedInteger('owner')->nullable();
             $table->timestamps();
         });
     }
