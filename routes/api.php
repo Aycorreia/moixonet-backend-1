@@ -3,6 +3,7 @@
 use App\Http\Controllers\ActiveChannelsController;
 use App\Http\Controllers\ChannelsController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\UserChannelsController;
 use Illuminate\Http\Request;
 
 /*
@@ -33,6 +34,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('/v1/active_channels/{channel}', [ActiveChannelsController::class, 'store' ]);
     Route::delete('/v1/active_channels/{channel}', [ActiveChannelsController::class, 'destroy' ]);
+
+    Route::get('/v1/user/channels', [UserChannelsController::class, 'index' ]);
 
 });
 

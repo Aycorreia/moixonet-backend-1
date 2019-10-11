@@ -41,4 +41,12 @@ class User extends Authenticatable
     {
         return $this->is_super_admin;
     }
+
+    /**
+     * Get the user's channels.
+     */
+    public function channels()
+    {
+        return $this->hasMany(Channel::class,'owner');
+    }
 }

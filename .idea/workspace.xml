@@ -4,9 +4,8 @@
     <list default="true" id="ad79c744-a5d1-4659-98da-961a10590dd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_01_192539_create_channels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_01_192539_create_channels_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/UserChannelsControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserChannelsControllerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ActiveChannelsControllerTest">
+  <component name="RunManager" selected="PHPUnit.UserChannelsControllerTest.regular_user_can_see_owned_channels">
     <configuration name="ActiveChannelsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ActiveChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ActiveChannelsControllerTest.php" scope="Class" />
       <method v="2" />
@@ -158,12 +157,12 @@
       <TestRunner class="Tests\Feature\ActiveChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ActiveChannelsControllerTest.php" method="regular_user_can_active_an_owned_channel" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ChannelsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" scope="Class" />
+    <configuration name="UserChannelsControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/UserChannelsControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ChannelsControllerTest.regular_user_can_update_channel_validation" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/ChannelsControllerTest.php" method="regular_user_can_update_channel_validation" scope="Method" />
+    <configuration name="UserChannelsControllerTest.regular_user_can_see_owned_channels" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserChannelsControllerTest" file="$PROJECT_DIR$/tests/Feature/UserChannelsControllerTest.php" method="regular_user_can_see_owned_channels" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -172,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserChannelsControllerTest.regular_user_can_see_owned_channels" />
+        <item itemvalue="PHPUnit.UserChannelsControllerTest" />
         <item itemvalue="PHPUnit.ActiveChannelsControllerTest" />
         <item itemvalue="PHPUnit.ActiveChannelsControllerTest.regular_user_can_active_an_owned_channel" />
         <item itemvalue="PHPUnit.ActiveChannelsControllerTest.manager_can_active_a_channel" />
-        <item itemvalue="PHPUnit.ChannelsControllerTest" />
-        <item itemvalue="PHPUnit.ChannelsControllerTest.regular_user_can_update_channel_validation" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +197,7 @@
       <workItem from="1570639383605" duration="7665000" />
       <workItem from="1570725827332" duration="86000" />
       <workItem from="1570725960987" duration="6459000" />
-      <workItem from="1570798915010" duration="4486000" />
+      <workItem from="1570798915010" duration="6092000" />
     </task>
     <servers />
   </component>
